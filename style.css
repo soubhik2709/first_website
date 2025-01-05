@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*1 what is global variable in css? here :root? 
+  2 what is  --primary text color in  here ? */ 
+
+/* i dont know its usees  */
+ :root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+  --padding-inline-section: 20px
+}
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  line-height: 1.8rem;
+}
+
+
+
+/* i dont know its usees  */
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+} 
+
+  body{
+    font-family: 'Poppins',sans-serif;
+    color:#183b56 ;
+
+  }
+  .small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+    /* border: 2px solid red; */
+}
+/* utility classes */   /* what is utility class */
+.main_border{
+  border:2px solid red ;
+}
+
+.container { 
+  /* border: 2px solid red; */
+   max-width: 1180px;
+  margin-inline: auto;  /* what is this ? */
+  padding-inline: 20px;
+}
+.flex{
+display: flex;
+align-items: center;
+}
+.topbanner {
+  background-image: url('./assets/asset\ 30.png');
+  background-color: #4fb3d4;
+  background-size: 300px;     /* what is background size */
+  /* border: 2px solid yellow; */
+}
+.topbanner-text {
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  /* border: 2px solid yellow; */
+}
+
+.hover-link {
+  color:var(--primary-text-color);
+  transition: 0.2s ease-out;
+}
+.hover-link:hover {
+  color: var(--accent-color);
+}
+.primary-button{
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-weight: 700;
+  color: white !important;
+  box-shadow: 0 0 5px var(--secondary-text-color);
+  transition: 0.2s ease-out;
+  /* border: 2px solid red; */
+}
+.primary-button:hover {
+  background-color: var(--accent-color-dark);
+  border-color: yellow;
+
+}
+.secondary-button {
+  border: 0.5px solid var(--secondary-text-color);
+  border-radius: 6px;
+  font-weight: 700;
+  color: var(--primary-text-color) !important;
+  padding: 12px 24px;
+  transition: 0.2s ease-out;
+}
+
+.secondary-button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color) !important;
+}
+
+
+/* navbar */
+.main-nav {
+     /* border: 2px solid red;  */
+     margin-top: 20px;
+     justify-content: space-between;
+
+}
+.company-logo img {
+  width: 200px;
+}
+.nav-links {
+  flex-basis: 730px;
+}
+.nav-links ul {
+  justify-content: end;
+  gap: 40px;
+}
+/* navbar */
+
+/* header section  */
+header{
+  padding: 50px var(--padding-inline-section) 0;  /* idnot understand */
+}
+.header-section {
+  justify-content: center;
+  gap: 50px;
+}
+.header-left {
+  max-width: 40vw;
+}
+.header-left h1 {
+  margin-top: 20px;
+}
+.get-started-button{
+  margin-top: 20px;
+}
+.heder-right img {
+  width: 600px;
+}
+/* header section  */
+
+/* companies section  */
+.companies-header{
+  text-align: center;
+  margin-block:30px;/* what is this  */
+  color:var(--primary-text-color);
+}
+.logos{
+  justify-content: space-between  ;
+ flex-wrap: wrap; /* wht is flex wrap  */
+}
+.logo{
+  height: 46px;
+}
+/* companies section  */
+
+/* features section */
+.features-section {
+  padding: 80px var(--padding-inline-section) 0;
+  background-image: url(./assets/asset\ 32.jpg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.features-header{
+  text-align: center;
+}
+.features-heading-text{
+  margin-bottom: 30px;
+}
+/* whatis flex wrap  */
+.features-area{
+flex-wrap: wrap; 
+justify-content: space-between;
+gap: 40px;
+ margin-top: 20px;
+}
+.features-card {
+  flex-direction: column;
+  gap: 20px;
+  max-width: 30%;
+  text-align: center;
+}
+.features-card img {
+  width: 60px;
+}
+/* features section */
+
+/* big-features-section */
+.big-feature-section {
+  padding: 30px var(--padding-inline-section) 0;
+}
+.big-feature-container {
+  gap: 30px;
+}
+.feature-img img{
+  width: 100%;
+  /* how 100% make it perfect */
+}
+.featuer-desc{
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* big-features-section */
+/* examples section */
+
+.examples-header {
+  flex-direction: column;
+  gap: 20px;
+}
+.example-area {
+justify-content: space-between;
+margin-block: 30px;
+
+
+}
+.example_card{
+  background-size: cover;
+  width: 23%;
+  position: relative;
+  min-height: 300px;
+  color: black;
+  background:linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(./assets/asset\ 35.jpeg);
+  background-size: cover;
+  transition: 0.2s ease-out;
+  
+}
+.example_card:hover {
+  box-shadow: 0 0 15px #5a3636;
+}
+
+.card-text{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+
+}
+.example_card:nth-child(4){
+   background:linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(./assets/asset\ 37.jpeg);
+  background-size: cover;
+}
+/* cta section */
+
+.cta-section{
+padding: 120px var(--padding-inline-section) 80px;
+background: #183b56;
+
+}
+.cta-section-Container {
+color: white;
+flex-direction: column;
+gap: 30px;
+}
+.cta-section-Container p{
+  color: white;
+  margin-top: 20px;
+}
+/* footer */
+
+footer {
+  padding-block: 80px;
+  background-color: #ebf2fa;
+}
+.link-colum{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.footer-container {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.subfooter {
+  background-color: #b9cde4;
+  padding: var(--padding-inline-section);
+}
+
+.subfooter-container {
+  justify-content: center;
+  gap: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
