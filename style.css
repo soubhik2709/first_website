@@ -66,6 +66,7 @@ ul {
    max-width: 1180px;
   margin-inline: auto;  /* what is this ? */
   padding-inline: 20px;
+  overflow: hidden;
 }
 .flex{
 display: flex;
@@ -126,6 +127,7 @@ align-items: center;
      /* border: 2px solid red;  */
      margin-top: 20px;
      justify-content: space-between;
+     position: relative;
 
 }
 .company-logo img {
@@ -137,6 +139,10 @@ align-items: center;
 .nav-links ul {
   justify-content: end;
   gap: 40px;
+}
+.nav-toggle{
+  display: none;
+
 }
 /* navbar */
 
@@ -169,8 +175,10 @@ header{
   color:var(--primary-text-color);
 }
 .logos{
-  justify-content: space-between  ;
- flex-wrap: wrap; /* wht is flex wrap  */
+  justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+
 }
 .logo{
   height: 46px;
@@ -212,8 +220,9 @@ gap: 40px;
 .big-feature-section {
   padding: 30px var(--padding-inline-section) 0;
 }
-.big-feature-container {
+.big-feature-cotainer {
   gap: 30px;
+  /* border: 1px solid black; */
 }
 .feature-img img{
   width: 100%;
@@ -223,6 +232,11 @@ gap: 40px;
   flex-direction: column;
   align-items: flex-start;
 }
+
+#special-big-feature{
+  flex-direction: row-reverse;
+}
+
 /* big-features-section */
 /* examples section */
 
@@ -233,6 +247,7 @@ gap: 40px;
 .example-area {
 justify-content: space-between;
 margin-block: 30px;
+flex-wrap: wrap;
 
 
 }
@@ -240,7 +255,7 @@ margin-block: 30px;
   background-size: cover;
   width: 23%;
   position: relative;
-  min-height: 300px;
+  height: 300px;
   color: black;
   background:linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(./assets/asset\ 35.jpeg);
   background-size: cover;
@@ -262,6 +277,10 @@ margin-block: 30px;
 .example_card:nth-child(4){
    background:linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(./assets/asset\ 37.jpeg);
   background-size: cover;
+}
+.examples-heading-text{
+  padding: 80px var(--padding-inline-section);
+  text-align: center;
 }
 /* cta section */
 
@@ -301,6 +320,7 @@ footer {
 }
 
 .subfooter-container {
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
@@ -308,8 +328,149 @@ footer {
 
 
 
+/* media-queries */
+@media screen and (max-width: 991px ) {
+  .nav-toggle{
+    display: block;
+    margin-right: 20px;
+
+  }
+.main-nav{
+  overflow: initial;
+}
+  .nav-links{
+    left: -100%;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    /* justify-content: center; */
+    padding-block: 20px;
+    transition: 0.2s ease-in-out;
+  } 
+  .nav-links ul{
+    flex-direction: column;
+  }
+  .nav-links.active{
+    left: 0;
+  }
+  .example-area{
+    gap: 20px;
+    /* border: 1px solid red; */
+
+  }
+  .example_card{
+    width: calc(50% - 10px);
+    /* height: 180px; */
+    /* border: 1px solid red; */
+  }
+  .cta-section{
+    padding-block: 90px ;
+    background: #104a77; 
+  }
+  .cta-section-Container{
+    gap: 15px;
+  }
+  .cta-section-Container h2{
+  gap: 5px;
+  font-size: 1rem;
+  }
+  .company-logo img{
+    width: 140px;
+    margin-bottom: 10px;
+  }
+  .heder-right img {
+    width: 100%;
+}
+.features-area {
+  gap: 20px;
+}
+
+h3{
+  font-size: 1.2rem;
+}
+}
+@media screen and (max-width:767px) {
+  .primary-button{
+    width: 50vw;
+    /* margin-inline: auto; */
+    /* font-size: 30px; */
+  border-radius: 6px;  /* why it is not working */
 
 
+  }
+  .header-section {
+    flex-direction: column-reverse;
+  }
+  .heder-right img {
+    width: 100%;
+}
+.header-left {
+  max-width: 100vw;
+  text-align: center;
+
+}
+.header-left p{
+  max-width: 80vw;
+  margin-inline: auto;
+  font-size: 1rem;
+}
+.cta-section a{
+  text-align: center;
+}
+.features-card {
+  width: calc(50%-10px);
+
+  /* flex-direction: column; */
+  /* gap: 20px; */
+  /* max-width: 30%; */
+  text-align: center;
+}
+.big-feature-cotainer{
+  flex-direction: column;
+
+}
+.big-feature-cotainer .feature-img{
+  width: 70%;
+}
+.big-feature-cotainer .featuer-desc{
+align-items: center;
+}
+#special-big-feature{
+flex-direction: column;
+}
+.footer-container{
+  flex-direction: column;
+  align-items: center;
+}
+.link-colum{
+  /* why this is not working */
+  align-items: stretch;
+  gap:5px;
+}
+}
+@media screen and (max-width:467px){
+  .header-left h1{
+   font-size: 2rem;
+  }
+  .header-left p{
+    font-size: 1.2rem;
+  }
+  .features-area{
+    flex-direction: column;
+  }
+  .features-card img{
+    height: 30vh;
+    width: 30vw;
+  }
+  .example-area{
+    flex-direction: column;
+  }
+  .example_card{
+    width: 100%;
+    border: 1px solid red;
+  }
+}
 
 
 

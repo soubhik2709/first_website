@@ -21,7 +21,7 @@
 <a href="#" class="company-logo">
     <img src="./assets/asset 1.png" alt="company-logo">
 </a>
-<div class="nav-links">
+<div class="nav-links" id="nav-links">
     <ul class="flex">
     <li><a href="#" class="hover-link">product</a></li>
     <li><a href="#" class="hover-link">customer</a></li>
@@ -30,6 +30,11 @@
     <li><a href="#" class="hover-link  secondary-button">sign in</a></li>
     <li><a href="#" class="hover-link  primary-button">sign up</a></li>
      </ul>
+    </div>
+    <div class="hamburger">
+        <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+        </a>
     </div>
   </div>
 </nav>
@@ -122,9 +127,9 @@
 
 <!-- big features sections -->
  <!-- why we use section tag -->
-<section class="big-feature-section  felx ">
+<section class="big-feature-section  ">
     <div class="container flex big-feature-cotainer">
-        <div class="feature-img">
+        <div class="feature-img ">
             <img src="./assets/asset 18.png" alt="">
         </div>
         <div class="featuer-desc flex">
@@ -135,7 +140,7 @@
     </div>
 </section>
 <section class="big-feature-section  felx ">
-    <div class="container flex big-feature-cotainer " style="flex-direction: row-reverse;">
+    <div class="container flex big-feature-cotainer "  id="special-big-feature" >
         <div class="feature-img">
             <img src="./assets/asset 21.png" alt="">
         </div>
@@ -255,6 +260,12 @@
 
     
     <script src="https://kit.fontawesome.com/202d8a2d8d.js" crossorigin="anonymous"></script>
-
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navlinks = document.getElementById('nav-links');
+        toggleButton.addEventListener('click' , function(){
+      navlinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
