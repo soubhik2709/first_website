@@ -1,0 +1,7 @@
+this file is also use for understanding the git bash command:
+git status
+git config
+git clone https://github.com/soubhik2709/first_website.git
+ls -a
+$ git --version
+$ git config --list --no-pager
